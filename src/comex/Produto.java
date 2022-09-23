@@ -8,6 +8,8 @@ public class Produto {
 	private int quantidadeEstoque;
 	private Categoria cat;
 	
+
+	
 	public double calculaValorEstoque (double p, int q ) {
 		double total = p*q;
 		return total;

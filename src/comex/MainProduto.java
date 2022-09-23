@@ -21,7 +21,7 @@ public class MainProduto {
 		produto1.setQuantidadeEstoque(1);
 		produto1.setCat(categoria1);
 		
-		Produto produto2 = new Produto();
+		ProdutoIsento produto2 = new ProdutoIsento();
 		produto2.setId(2);
 		produto2.setNome("Clean Architecture");
 		produto2.setPrecoUnitario(102.90);
@@ -45,6 +45,7 @@ public class MainProduto {
 		System.out.println("O imposto eh: " + produto1.calculaImposto(produto1.getPrecoUnitario()));
 		System.out.println("o valor de estoque do produto eh: " + produto1.calculaValorEstoque(produto1.getPrecoUnitario() , produto1.getQuantidadeEstoque()));
 		
+		System.out.println("");
 		System.out.println("----------------------------------------");
 		System.out.println("");
 		
@@ -56,6 +57,7 @@ public class MainProduto {
 		System.out.println("O imposto eh: " + produto2.calculaImposto(produto2.getPrecoUnitario()));
 		System.out.println("o valor de estoque do produto eh: " + produto2.calculaValorEstoque(produto2.getPrecoUnitario() , produto2.getQuantidadeEstoque()));
 		
+		System.out.println("");
 		System.out.println("----------------------------------------");
 		System.out.println("");
 		
@@ -67,6 +69,11 @@ public class MainProduto {
 		System.out.println("O imposto eh: " + produto3.calculaImposto(produto3.getPrecoUnitario()));
 		System.out.println("o valor de estoque do produto eh: " + produto3.calculaValorEstoque(produto3.getPrecoUnitario() , produto3.getQuantidadeEstoque()));
 
+		System.out.println("");
+		System.out.println("----------------------------------------");
+		System.out.println("");
+		
+		
 	}
 
 }
