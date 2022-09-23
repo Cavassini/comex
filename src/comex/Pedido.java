@@ -1,12 +1,14 @@
 package comex;
 
 public class Pedido {
-	int id;
-	String data;
-	Cliente cliente;
+	private int id;
+	private String data;
+	private Cliente cliente;
+	private static int total =0;
 	
-	public  Pedido(int i, String date, Cliente cli) {
-		id = i;
+	public  Pedido( String date, Cliente cli) {
+		total ++;
+		id = total;
 		data = date;
 		cliente = cli;
 	}

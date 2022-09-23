@@ -4,7 +4,13 @@ public class Categoria {
 	private int id;
 	private String nome;
 	private String status;
+	private static int total = 0;
 
+	public Categoria () {
+		total ++;
+		id = total;
+	}
+	
 	public int getId() {
 		return id;
 	}

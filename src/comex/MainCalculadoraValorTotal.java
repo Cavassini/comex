@@ -1,9 +1,9 @@
 package comex;
 
-public class MainItemPedido {
+public class MainCalculadoraValorTotal {
 
 	public static void main(String[] args) {
-
+		
 		Categoria categoria1 = new Categoria();
 		categoria1.setNome("INFORMATICA");
 		categoria1.setStatus("Ativa");
@@ -55,33 +55,14 @@ public class MainItemPedido {
 		ItemPedido item1 = new ItemPedido(produto1, produto1, produto1, pedido1, "PROMOCAO");
 		ItemPedido item2 = new ItemPedido(produto2, produto2, produto2, pedido2, "NENHUM");
 		ItemPedido item3 = new ItemPedido(produto3, produto3, produto3, pedido3, "QUANTIDADE");
-
-		System.out.println("Id do ItemPedido: " + item1.getId());
-		System.out.println("Preco: " + item1.getPrecoUnitario().getPrecoUnitario());
-		System.out.println("Quantidade: " + item1.getQuantidade().getQuantidadeEstoque());
-		System.out.println("Nome do produto: "+ item1.getProduto().getNome());
-		System.out.println("Id do Pedido: " + item1.getPedido().getId());
-		System.out.println("Desconto: "+ item1.getDesconto());
 		
-		System.out.println();
+		System.out.println("Resultado: "+item1.calculadora(item1.getPrecoUnitario().getPrecoUnitario(), item1.getQuantidade().getQuantidadeEstoque()));
+		System.out.println("Resultado: "+item2.calculadora(item2.getPrecoUnitario().getPrecoUnitario(), item2.getQuantidade().getQuantidadeEstoque()));
+		System.out.println("Resultado: "+item3.calculadora(item3.getPrecoUnitario().getPrecoUnitario(), item3.getQuantidade().getQuantidadeEstoque()));
 		
-		System.out.println("Id do ItemPedido: " + item2.getId());
-		System.out.println("Preco: " + item2.getPrecoUnitario().getPrecoUnitario());
-		System.out.println("Quantidade: " + item2.getQuantidade().getQuantidadeEstoque());
-		System.out.println("Nome do produto: "+ item2.getProduto().getNome());
-		System.out.println("Id do Pedido: " + item2.getPedido().getId());
-		System.out.println("Desconto: "+ item2.getDesconto());
-		
-		System.out.println();
-		
-		System.out.println("Id do ItemPedido: " + item3.getId());
-		System.out.println("Preco: " + item3.getPrecoUnitario().getPrecoUnitario());
-		System.out.println("Quantidade: " + item3.getQuantidade().getQuantidadeEstoque());
-		System.out.println("Nome do produto: "+ item3.getProduto().getNome());
-		System.out.println("Id do Pedido: " + item3.getPedido().getId());
-		System.out.println("Desconto: "+ item3.getDesconto());
-		
-		
+		System.out.println("Resultado: "+produto1.calculadora(produto1.getPrecoUnitario(), produto1.getQuantidadeEstoque()));
+		System.out.println("Resultado: "+produto2.calculadora(produto2.getPrecoUnitario(), produto2.getQuantidadeEstoque()));
+		System.out.println("Resultado: "+produto3.calculadora(produto3.getPrecoUnitario(), produto3.getQuantidadeEstoque()));
 	}
 
 }

@@ -1,6 +1,6 @@
 package comex;
 
-public class ItemPedido {
+public class ItemPedido implements CalculadoraValorTotal{
 	private  int id =0;
 	private Produto precoUnitario;
 	private Produto quantidade;
@@ -68,6 +68,11 @@ public class ItemPedido {
 		double total = this.getPrecoUnitario().getPrecoUnitario() - this.getDesconto();
 		return total;
 		
+	}
+
+	@Override
+	public double calculadora(double preco, int qtd) {
+		return preco * qtd;
 	}
 	}
 	

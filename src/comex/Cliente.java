@@ -11,10 +11,11 @@ public class Cliente {
 	private String bairro;
 	private String cidade;
 	private String estado;
+	private static int total = 0;
 	
-	public Cliente(int i, String n, String c, String tel, String r, int num, String comp, String b, String city, String es) {
-		
-		this.id = i;
+	public Cliente(String n, String c, String tel, String r, int num, String comp, String b, String city, String es) {
+		total ++;
+		id = total;
 		this.nome = n;
 		this.cpf = c;
 		this.telefone = tel;

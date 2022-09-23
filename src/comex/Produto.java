@@ -1,14 +1,20 @@
 package comex;
 
-public class Produto {
+public class Produto implements CalculadoraValorTotal {
 	private int id;
 	private String nome;
 	private String descricao;
 	private double precoUnitario;
 	private int quantidadeEstoque;
 	private Categoria cat;
+	private static int total = 1;
 	
-
+	
+	
+	public Produto () {
+		id = total;
+		total ++;
+	}
 	
 	public double calculaValorEstoque (double p, int q ) {
 		double total = p*q;
@@ -55,6 +61,11 @@ public class Produto {
 	}
 	public void setCat(Categoria cat) {
 		this.cat = cat;
+	}
+
+	@Override
+	public double calculadora(double preco, int qtd) {		
+		return preco * qtd;
 	}
 
 }
