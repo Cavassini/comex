@@ -1,20 +1,16 @@
-package comex;
+package br.com.comex.main;
+
+import br.com.comex.modelo.*;
 
 public class MainCalculadoraValorTotal {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		
-		Categoria categoria1 = new Categoria();
-		categoria1.setNome("INFORMATICA");
-		categoria1.setStatus("Ativa");
+		Categoria categoria1 = new Categoria("INFORMATICA", "Ativa");
 		
-		Categoria categoria2 = new Categoria();
-		categoria2.setNome("MOVEIS");
-		categoria2.setStatus("Inativa");		
-		
-		Categoria categoria3 = new Categoria();
-		categoria3.setNome("LIVROS");
-		categoria3.setStatus("Ativa");
+		Categoria categoria2 = new Categoria("MOVEIS","Inativa");
+
+		Categoria categoria3 = new Categoria("LIVROS","Ativa");
 
 		Produto produto1 = new Produto();
 		produto1.setId(1);
@@ -37,13 +33,13 @@ public class MainCalculadoraValorTotal {
 		produto3.setQuantidadeEstoque(15);
 		produto3.setCat(categoria1);
 
-		Cliente cliente1 = new Cliente("Ana", "111222333", "121212", "rua A", 7, "ao lado do bar", "gabirobal",
+		Cliente cliente1 = new Cliente("Ana", "111222333", "121212", "rua A", "7", "ao lado do bar", "gabirobal",
 				"Andradas", "mg");
 		
-		Cliente cliente2 = new Cliente( "Eli", "999888777", "234567", "rua B", 8, "na grafica", "alto da serra",
+		Cliente cliente2 = new Cliente( "Eli", "999888777", "234567", "rua B", "8", "na grafica", "alto da serra",
 				"Andradas", "mg");
 
-		Cliente cliente3 = new Cliente( "Gabi", "444555666", "9876543", "rua C", 9, "loja de ração", "portal do sol",
+		Cliente cliente3 = new Cliente( "Gabi", "444555666", "9876543", "rua C", "9", "loja de ração", "portal do sol",
 				"Andradas", "mg");
 
 		Pedido pedido1 = new Pedido( "23/09/2022", cliente1);

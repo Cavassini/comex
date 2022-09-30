@@ -1,4 +1,4 @@
-package comex;
+package br.com.comex.modelo;
 
 public class ItemPedido implements CalculadoraValorTotal{
 	private  int id =0;
@@ -9,6 +9,15 @@ public class ItemPedido implements CalculadoraValorTotal{
 	private double desconto;
 	private String tipoDesconto;
 	private static int total = 1;
+	
+	@Override
+	public String toString() {
+		return "id:" + this.getId()+ " Preco:" + 
+				this.getPrecoUnitario() + " Quantidade:" + this.getQuantidade()
+				+" Produto:" + this.getProduto() 
+				+ " Pedido:" + this.getPedido()
+				+ " Desconto"+ this.getDesconto();
+		}
 	
 	public ItemPedido( Produto preco, Produto qtd, Produto p, Pedido ped, String tipo) {
 		

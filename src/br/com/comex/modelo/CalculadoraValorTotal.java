@@ -1,4 +1,6 @@
-package comex;
+package br.com.comex.modelo;
+
+import br.com.comex.modelo.*;
 
 public abstract interface CalculadoraValorTotal {
 	

@@ -1,16 +1,19 @@
-package comex;
+package br.com.comex.main;
+
+import br.com.comex.modelo.*;
 
 public class MainCliente {
 	public static void main(String[] args) {
-		Cliente cliente1 = new Cliente( "Ana", "111222333", "121212", "rua A", 7, "ao lado do bar", "gabirobal",
-				"Andradas", "mg");
-
-		Cliente cliente2 = new Cliente( "Eli", "999888777", "234567", "rua B", 8, "na grafica", "alto da serra",
-				"Andradas", "mg");
-
-		Cliente cliente3 = new Cliente("Gabi", "444555666", "9876543", "rua C", 9, "loja de ração", "portal do sol",
-				"Andradas", "mg");
-
+		Cliente cliente1 = new Cliente( "Ana Luiza", "111.222.333-44", "35-99939-0522", "rua A", "01", "ao lado do bar", "gabirobal","Andradas", "SP");
+		System.out.println(cliente1);
+		Cliente cliente2 = new Cliente( "1Ana Luiza", "111.222.333-44", "35-99939-0522", "rua A", "01", "ao lado do bar", "gabirobal","Andradas", "SP");
+		System.out.println(cliente2);
+		Cliente cliente3 = new Cliente( "Ana Luiza", "11122233344", "35-99939-0522", "rua A", "01", "ao lado do bar", "gabirobal","Andradas", "SP");
+		System.out.println(cliente3);
+		Cliente cliente4 = new Cliente( "Ana Luiza", "111.222.333-44", "35-99939-0522", "rua A", "01", "ao lado do bar", "gabirobal","Andradas", "SP");
+		System.out.println(cliente4);
+		
+		/**
 		System.out.println("Nome:" + cliente1.getNome() + " cpf:" + cliente1.getCpf() + " telefone:"
 				+ cliente1.getTelefone() + " Rua:" + cliente1.getRua() + " Numero:" + cliente1.getNumero()
 				+ " Complemento:" + cliente1.getComplemento() + " Bairro:" + cliente1.getBairro() + " Cidade:"
@@ -25,5 +28,8 @@ public class MainCliente {
 				+ cliente3.getTelefone() + " Rua:" + cliente3.getRua() + " Numero:" + cliente3.getNumero()
 				+ " Complemento:" + cliente3.getComplemento() + " Bairro:" + cliente3.getBairro() + " Cidade:"
 				+ cliente3.getCidade() + " Estado:" + cliente3.getEstado());
+				**/
+		
+		
 	}
 }
