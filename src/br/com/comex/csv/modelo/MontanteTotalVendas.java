@@ -1,6 +1,7 @@
 package br.com.comex.csv.modelo;
 
 import java.util.List;
+import java.util.Locale;
 
 public class MontanteTotalVendas {
 	

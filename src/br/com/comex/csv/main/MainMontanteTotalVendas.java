@@ -3,6 +3,7 @@ package br.com.comex.csv.main;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import br.com.comex.csv.modelo.LeitorPedidoCsv;
 import br.com.comex.csv.modelo.MontanteTotalVendas;
@@ -23,7 +24,9 @@ public class MainMontanteTotalVendas {
 		
 		double retorno = montante.calcularMontanteVendas(pedidoCsv);
 		
-		System.out.println("O Montante de vendas eh: "+ retorno);
+		String retornoConvertidoBr =  String.format(new Locale("pt","BR"), "%.2f", retorno);
+		
+		System.out.println("O Montante de vendas eh: "+ retornoConvertidoBr);
 		
 	}
 }
