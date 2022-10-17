@@ -46,9 +46,6 @@ public class ClienteDAO {
 		
 		while (rst.next()) {
 			
-			System.out.println(rst.getString("nome"));
-			System.out.println("-------");
-			
 			
 			int id = rst.getInt("id");  
 			String nome = rst.getString("nome");
@@ -69,4 +66,46 @@ public class ClienteDAO {
 	}
 		return lista;
 }
+	public void excluiCliente(int id) throws SQLException {
+		String sql = "delete from comex.cliente where id = ?";
+		ConnectionFactory conFa = new ConnectionFactory();
+		Connection conexao = conFa.criarConexao();
+		
+		PreparedStatement ps = conexao.prepareStatement(sql);
+		ps.setInt(1, id);
+		ps.execute();
+		
+		ps.close();
+	}
+	
+public void atualizaCliente(String novoNome, String cpf , String telefone ,String rua, String numero , String complemento, String bairro, String cidade, String estado, int id) throws SQLException {
+		
+		ConnectionFactory conFa = new ConnectionFactory();
+		Connection con = conFa.criarConexao();
+		
+		String sql = "update comex.cliente set nome = ?, cpf = ?, telefone = ?, rua = ? , numero = ? , complemento = ? ,bairro = ?, cidade = ?, uf = ?"
+					+"where id= ?";
+		
+		PreparedStatement stm = con.prepareStatement(sql);
+		
+		stm.setString(1, novoNome);
+		stm.setString(2, cpf);
+		stm.setString(3, telefone);
+		stm.setString(4, rua);
+		stm.setString(5, numero);
+		stm.setString(6, complemento);
+		stm.setString(7, bairro);
+		stm.setString(8, cidade);
+		stm.setString(9, estado);
+		stm.setInt(10, id);
+		
+		
+		
+		stm.execute();
+		
+		stm.close();
+		con.close();
+		
+	}
+	
 }
