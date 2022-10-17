@@ -18,6 +18,7 @@ public class Produto implements CalculadoraValorTotal {
 	public Produto (int id, String nome, String descricao, 
 					double precoUnitario, int quantidadeEstoque, 
 			        Categoria categoria) {
+		
 		this.setId(id); 
 		this.nome = nome;
 		this.descricao = descricao;
@@ -100,9 +101,8 @@ public class Produto implements CalculadoraValorTotal {
 	
 	@Override
 	public String toString() {
-		return "id:" + this.getId()+ " Nome:" + this.getNome() + " Descricao:" + this.getDescricao()+
-				" Preco:"+this.getPrecoUnitario()+" Quantidade:"+this.getQuantidadeEstoque()+
-				" CAtegoria: "+this.getCat();
-		}
+		return "Produto [id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", precoUnitario=" + precoUnitario
+				+ ", quantidadeEstoque=" + quantidadeEstoque + ", cat=" + cat + "]";
+	}
 
 }
