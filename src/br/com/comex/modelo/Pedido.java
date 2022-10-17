@@ -8,8 +8,8 @@ public class Pedido {
 	
 	@Override
 	public String toString() {
-		return "id:" + this.getId()+ " Data:" + this.getData() + " Cliente:" + this.getCliente();
-		}
+		return "Pedido [id=" + id + ", data=" + data + ", cliente=" + cliente + "]";
+	}
 	
 	public  Pedido( String date, Cliente cli) {
 		total ++;

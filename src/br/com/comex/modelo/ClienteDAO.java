@@ -34,7 +34,7 @@ public class ClienteDAO {
 		
 	}
 	
-	public List<Cliente> listarClientes() throws SQLException {
+public List<Cliente> listarClientes() throws SQLException {
 		
 		List<Cliente> lista = new ArrayList<>();
 		ConnectionFactory conFa = new ConnectionFactory();
@@ -66,6 +66,7 @@ public class ClienteDAO {
 	}
 		return lista;
 }
+
 	public void excluiCliente(int id) throws SQLException {
 		String sql = "delete from comex.cliente where id = ?";
 		ConnectionFactory conFa = new ConnectionFactory();
