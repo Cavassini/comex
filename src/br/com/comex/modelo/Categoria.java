@@ -1,11 +1,18 @@
 package br.com.comex.modelo;
 
+import javax.xml.bind.annotation.XmlAccessorOrder;
+
+@XmlAccessorOrder
 public class Categoria {
 	private int id;
 	private String nome;
 	private EnumStatus status = EnumStatus.ATIVA;
 	private static int total = 0;
-
+	
+	public Categoria () {
+		
+	}
+	
 	public Categoria (int identificador, String nome, String status) {
 		//total ++;
 		//id = total;
