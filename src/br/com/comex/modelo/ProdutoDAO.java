@@ -23,7 +23,7 @@ public class ProdutoDAO {
 		stm.setString(2, produto.getDescricao());
 		stm.setDouble(3,produto.getPrecoUnitario());
 		stm.setInt(4, produto.getQuantidadeEstoque());
-		stm.setInt(5, 13);
+		stm.setInt(5, produto.getId());
 		stm.setString(6, "ISENTO");
 		
 		stm.executeQuery();
