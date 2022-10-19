@@ -17,7 +17,8 @@ public class MainInsereProduto {
 		
 		Produto produto = new Produto(15, "Computador Positivo", "basico - para uso pessoal", 2.500, 1, categoria);
 		
-		ProdutoDAO produtoDAO = new ProdutoDAO();
+		ConnectionFactory conFa = new ConnectionFactory();
+		ProdutoDAO produtoDAO = new ProdutoDAO(conFa);
 		produtoDAO.insereProduto(produto);
 
 	}

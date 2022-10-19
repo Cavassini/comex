@@ -8,15 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoDAO {
+	private Connection con;
 	
-	public ProdutoDAO() {
-		
+	public ProdutoDAO(ConnectionFactory conFa) throws SQLException {
+		con = conFa.criarConexao();
 	}
 	
 	public void insereProduto(Produto produto) throws SQLException {
-		ConnectionFactory conFa = new ConnectionFactory();
-		Connection con = conFa.criarConexao();	
-		
+	
 		PreparedStatement stm = con.prepareStatement("insert into comex.produto (nome,descricao,preco_unitario,quantidade_estoque,categoria_id,tipo) values (?,?,?,?,?,?)");
 		
 		stm.setString(1, produto.getNome());

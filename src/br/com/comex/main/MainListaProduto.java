@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.comex.modelo.ConnectionFactory;
 import br.com.comex.modelo.Produto;
 import br.com.comex.modelo.ProdutoDAO;
 
@@ -11,7 +12,8 @@ public class MainListaProduto {
 
 	public static void main(String[] args) throws SQLException {
 		
-		ProdutoDAO produtodao = new ProdutoDAO();
+		ConnectionFactory conFa = new ConnectionFactory();
+		ProdutoDAO produtodao = new ProdutoDAO(conFa);
 		List<Produto> lista = new ArrayList<Produto>();
 		lista = produtodao.listarProdutos();
 		
