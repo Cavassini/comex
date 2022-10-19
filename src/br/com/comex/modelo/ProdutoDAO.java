@@ -70,7 +70,7 @@ public class ProdutoDAO {
 	}
 		return lista;
 }
-	public void atualizaProduto(String novoNome, String descricao , double preco , int quantidade , int id) throws SQLException {
+	public void atualizaProduto(Produto produto) throws SQLException {
 		
 		ConnectionFactory conFa = new ConnectionFactory();
 		Connection con = conFa.criarConexao();
@@ -80,11 +80,11 @@ public class ProdutoDAO {
 		
 		PreparedStatement stm = con.prepareStatement(sql);
 		
-		stm.setString(1, novoNome);
-		stm.setString(2, descricao);
-		stm.setDouble(3, preco);
-		stm.setInt(4, quantidade);
-		stm.setInt(5, id);
+		stm.setString(1, produto.getNome());
+		stm.setString(2, produto.getDescricao());
+		stm.setDouble(3, produto.getPrecoUnitario());
+		stm.setInt(4, produto.getQuantidadeEstoque());
+		stm.setInt(5, produto.getId());
 		
 		stm.execute();
 		

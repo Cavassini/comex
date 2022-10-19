@@ -16,6 +16,10 @@ public class PublicaWebService {
 		List<Categoria>lista = new ArrayList<>();
 		lista = comex.getCategorias();
 		
+//		Categoria cat = new Categoria("ELETRODOMESTICOS","INATIVA");
+		
+//		comex.adicionarCategoria(cat);
+		
 		for (Categoria categoria : lista) {
 			System.out.println(categoria);
 			

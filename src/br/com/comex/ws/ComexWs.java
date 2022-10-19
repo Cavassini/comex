@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 import br.com.comex.modelo.Categoria;
@@ -38,5 +39,22 @@ public class ComexWs {
 		}
 		
 		return lista;
+	}
+	public void adicionarCategoria(@WebParam(name="nome")Categoria categoria) throws SQLException {
+		
+		ConnectionFactory conFa = new ConnectionFactory();
+		
+		Connection con = conFa.criarConexao();
+		String nome = categoria.getNome();
+		String status = categoria.isStatus().name();
+		
+		String sql = "insert into comex.categoria (NOME,STATUS) values (?,?) ";
+		
+		PreparedStatement preparado = con.prepareStatement(sql);
+		
+		preparado.setString(1, nome);
+		preparado.setString(2, status);
+		
+		preparado.executeQuery();
 	}
 }
