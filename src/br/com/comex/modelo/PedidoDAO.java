@@ -9,13 +9,13 @@ import java.util.List;
 
 public class PedidoDAO {
 	
-	public void inserePedido(int idCliente) throws SQLException {
+	public void inserePedido(Cliente cliente) throws SQLException {
 		ConnectionFactory conFa = new ConnectionFactory();
 		Connection con = conFa.criarConexao();
 		
 		PreparedStatement stm = con.prepareStatement("insert into comex.pedido (data, cliente_id) values (sysdate , ?)");
 		
-		stm.setInt(1, idCliente);
+		stm.setInt(1, cliente.getId());
 		
 		stm.executeQuery();
 		
