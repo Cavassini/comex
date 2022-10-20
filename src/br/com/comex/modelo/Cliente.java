@@ -13,8 +13,58 @@ public class Cliente {
 	private EnumEstado estado;
 	private static int total = 0;
 	
+	public Cliente() {
+		
+	}
 	
-	
+	public static int getTotal() {
+		return total;
+	}
+
+	public static void setTotal(int total) {
+		Cliente.total = total;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public void setEstado(EnumEstado estado) {
+		this.estado = estado;
+	}
+
 	public Cliente(String n, String c, String tel, String r, String num, String comp, String b, String city, String es) {
 		total ++;
 		id = total;

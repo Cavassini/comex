@@ -60,7 +60,6 @@ public List<Cliente> listarClientes() throws SQLException {
 			
 			Cliente cliente = new Cliente( nome, cpf, telefone, rua, numero, complemento, bairro, cidade, uf);
 			
-			
 			lista.add(cliente);
 			
 	}
