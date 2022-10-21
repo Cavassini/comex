@@ -65,18 +65,18 @@ public class Cliente {
 		this.estado = estado;
 	}
 
-	public Cliente(String n, String c, String tel, String r, String num, String comp, String b, String city, String es) {
+	public Cliente(String nome, String cpf, String telefone, String rua, String numero, String complemento, String bairro, String cidade, String estado) {
 		total ++;
 		id = total;
-		this.nome = n;
-		this.cpf = c;
-		this.telefone = tel;
-		this.rua = r;
-		this.numero = num;
-		this.complemento = comp;
-		this.bairro = b;
-		this.cidade = city;
-		this.estado = EnumEstado.valueOf(es);
+		this.nome = nome;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		this.rua = rua;
+		this.numero = numero;
+		this.complemento = complemento;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		this.estado = EnumEstado.valueOf(estado);
 		
 		boolean validaCpf = cpf.matches("\\d\\d\\d.\\d\\d\\d.\\d\\d\\d-\\d\\d");
 		boolean validatelefone = telefone.matches("\\d\\d-\\d\\d\\d\\d\\d-\\d\\d\\d\\d");
@@ -113,7 +113,7 @@ public class Cliente {
 			throw new IllegalArgumentException("cidade invalido");
 		}
 		
-		if (estado.values().length == 2) {
+		if (this.estado.values().length == 2) {
 			throw new IllegalArgumentException("estado invalido");
 		}		
 		

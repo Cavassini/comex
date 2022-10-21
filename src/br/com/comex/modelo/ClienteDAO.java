@@ -78,7 +78,7 @@ public List<Cliente> listarClientes() throws SQLException {
 		ps.close();
 	}
 	
-public void atualizaCliente(String novoNome, String cpf , String telefone ,String rua, String numero , String complemento, String bairro, String cidade, String estado, int id) throws SQLException {
+public void atualizaCliente(Cliente cliente) throws SQLException {
 		
 		ConnectionFactory conFa = new ConnectionFactory();
 		Connection con = conFa.criarConexao();
@@ -88,16 +88,16 @@ public void atualizaCliente(String novoNome, String cpf , String telefone ,Strin
 		
 		PreparedStatement stm = con.prepareStatement(sql);
 		
-		stm.setString(1, novoNome);
-		stm.setString(2, cpf);
-		stm.setString(3, telefone);
-		stm.setString(4, rua);
-		stm.setString(5, numero);
-		stm.setString(6, complemento);
-		stm.setString(7, bairro);
-		stm.setString(8, cidade);
-		stm.setString(9, estado);
-		stm.setInt(10, id);
+		stm.setString(1, cliente.getNome());
+		stm.setString(2, cliente.getCpf());
+		stm.setString(3, cliente.getTelefone());
+		stm.setString(4, cliente.getRua());
+		stm.setString(5, cliente.getNumero());
+		stm.setString(6, cliente.getComplemento());
+		stm.setString(7, cliente.getBairro());
+		stm.setString(8, cliente.getCidade());
+		stm.setString(9, cliente.getEstado().toString());
+		stm.setInt(10, cliente.getId());
 		
 		
 		

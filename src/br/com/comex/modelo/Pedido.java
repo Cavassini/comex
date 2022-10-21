@@ -6,6 +6,26 @@ public class Pedido {
 	private Cliente cliente;
 	private static int total =0;
 	
+	public static int getTotal() {
+		return total;
+	}
+
+	public static void setTotal(int total) {
+		Pedido.total = total;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
 	@Override
 	public String toString() {
 		return "Pedido [id=" + id + ", data=" + data + ", cliente=" + cliente + "]";
